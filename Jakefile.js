@@ -32,13 +32,16 @@ function hint(msg, args) {
 function calculateVersion(officialRelease, callback) {
     var version = require('./package.json').version;
 
-    if (officialRelease) {
-        callback(version);
-    } else {
-        git.short(function (str) {
-            callback(version + '+' + str);
-        });
-    }
+    //if (officialRelease) {
+    //    callback(version);
+    //} else {
+    //    git.short(function (str) {
+    //        callback(version + '+' + str);
+    //    });
+    //}
+
+    //always an official release
+    callback(version);
 }
 
 
