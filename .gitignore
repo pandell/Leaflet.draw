@@ -17,3 +17,4 @@ debug/local/
 Gemfile.lock
 
 /.yarn/install-state.gz
+/*.tgz

@@ -29,18 +29,18 @@
   "style": "dist/leaflet.draw.css",
   "directories": {
     "doc": "docs/",
-    "example": "docs/example",
+    "example": "docs/examples/",
     "lib": "src/"
   },
   "files": [
-    "dist/*",
-    "docs/*"
+    "dist/**/*",
+    "docs/**/*"
   ],
   "scripts": {
-    "build": "jake build -f ./Jakefile.js",
-    "test": "jake test",
-    "docs": "jake docs",
-    "release": "./build/publish.sh"
+    "build": "yarn run test && yarn run build:docs && yarn run build:dist",
+    "build:dist": "jake build",
+    "build:docs": "jake docs",
+    "test": "jake test"
   },
   "repository": {
     "type": "git",
