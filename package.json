@@ -40,7 +40,9 @@
     "build": "yarn run test && yarn run build:docs && yarn run build:dist",
     "build:dist": "jake build",
     "build:docs": "jake docs",
-    "test": "jake test"
+    "test": "jake test",
+    "prepack": "yarn run build && yarn run prepack:clean-package-json",
+    "prepack:clean-package-json": "node build/clean-package-json.mjs"
   },
   "repository": {
     "type": "git",
