@@ -20,6 +20,7 @@ git -c core.longpaths=true clean -dfx
 # use pattern "1.0.5-pandell.X"
 yarn
 vi package.json
+git commit -am "WIP" # remember "package.json" change
 
 # create "~/work/Leaflet.draw/package.tgz", then verify
 # it contains everything we want to release
@@ -29,11 +30,11 @@ yarn pack # https://yarnpkg.com/cli/pack
 git reset --hard # "yarn pack" changes "package.json", reset it back
 git -c core.longpaths=true clean -dfx # "yarn pack" creates "dist" directory and "package.tgz", remove them
 ${env:NPM_CONFIG_//registry.npmjs.org/:_authToken} = "See 1Password"
-yarn npm publish --access public # https://yarnpkg.com/cli/npm/publish
+yarn && yarn npm publish --access public # https://yarnpkg.com/cli/npm/publish
 
 # update source control
 git checkout -- package.json # "yarn npm publish" changes "package.json", reset it back but keep other changes
-git commit -am "v1.0.5-pandell.X"
+git add * && git commit --amend --message "v1.0.5-pandell.X"
 git tag "v1.0.5-pandell.X"
 git push --tags
 ```

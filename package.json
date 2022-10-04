@@ -1,6 +1,6 @@
 {
   "name": "@pandell/leaflet-draw",
-  "version": "1.0.4",
+  "version": "1.0.5-pandell.1",
   "description": "Vector drawing plugin for Leaflet (Pandell fork)",
   "devDependencies": {
     "eslint": "^8.24.0",
