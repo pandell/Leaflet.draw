@@ -1,3 +1,6 @@
+// Script run during packaging (see package.json) to tidy up the package.json
+// that is included with the released version.
+
 import { readFileSync, writeFileSync } from 'node:fs';
 
 const packageJsonPath = "./package.json";
