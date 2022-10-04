@@ -263,7 +263,8 @@ exports.test = function (complete, fail) {
 
     console.log('Running tests...');
 
-    var server = new karma.Server(testConfig, function (exitCode) {
+    var parsedTestConfig = karma.config.parseConfig(testConfig.configFile, testConfig);
+    var server = new karma.Server(parsedTestConfig, function (exitCode) {
         if (!exitCode) {
             console.log('\tTests ran successfully.\n');
             complete();

@@ -1,5 +1,5 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Always use UNIX newlines in this repo
+* text=lf
 
 # Custom for Visual Studio
 *.cs     diff=csharp
