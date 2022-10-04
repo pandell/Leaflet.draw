@@ -1,7 +1,7 @@
 {
-  "name": "leaflet-draw",
+  "name": "@pandell/leaflet-draw",
   "version": "1.0.4",
-  "description": "Vector drawing plugin for Leaflet",
+  "description": "Vector drawing plugin for Leaflet (Pandell fork)",
   "devDependencies": {
     "eslint": "^8.24.0",
     "eslint-config-mourner": "^3.0.0",
@@ -46,7 +46,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Leaflet/Leaflet.draw.git"
+    "url": "https://github.com/pandell/Leaflet.draw.git"
   },
   "keywords": [
     "maps",
@@ -63,6 +63,10 @@
     },
     {
       "name": "Jacob Toye"
+    },
+    {
+      "name": "Pandell Technology Corporation",
+      "url": "https://github.com/pandell"
     }
   ],
   "license": "MIT",
