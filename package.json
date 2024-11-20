@@ -25,6 +25,9 @@
     "uglify-js": "^2.8.29",
     "uglifycss": "0.0.29"
   },
+  "resolutions": {
+    "@babel/traverse": "^7.23.2"
+  },
   "main": "dist/leaflet.draw.js",
   "style": "dist/leaflet.draw.css",
   "directories": {
